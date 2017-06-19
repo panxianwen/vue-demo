@@ -74,11 +74,37 @@
 </template>
 
 <script>
+  import { mapGetters } from 'vuex'
+
   export default {
     data () {
       return {
         show: 'home'
       }
+    },
+
+    computed: mapGetters({
+      islogin: 'getIsLogin',
+      articleFlag: 'getArticleFlag'
+    }),
+
+    methods: {
+      changeLoginway (loginway) {
+        console.info(this.$store)
+        this.$store.dispatch('changeLoginway', loginway)
+      }
+    },
+
+    mounted () {
+      // 发送请求,判断是否已经登录
+      /* this.$http.get('usr/isLogin').then(function (response) {
+        if(response.body == 'success') {
+          this.$store.dispatch('changeIsLogin', true)
+        }else{
+          this.$store.dispatch('changeIsLogin', false)
+        }
+      }) */
+      this.$store.dispatch('changeIsLogin', true)
     }
   }
 </script>
