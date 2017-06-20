@@ -11,3 +11,7 @@ export const getArticleFlag = state => state.articleFlag
 export const getShow = state => state.show
 
 export const getArticles = state => state.articles
+
+export const getBonus = state => state.texts
+
+export const getTopicArticles = state => state.topicArticles

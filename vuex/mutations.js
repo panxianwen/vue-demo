@@ -16,6 +16,10 @@ export default {
   },
   CHANGE_ARTICLE_FLAG (state, flag) {
     state.articleFlag = flag
+  },
+  DISPLAY_TOPIC (state, type) {
+    state.show = type
+    state.topicArticles = state[type + 'TopicArticles']
   }
 
 }

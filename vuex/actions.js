@@ -17,3 +17,8 @@ export const displayArticles = ({commit}, payload) =>{
 export const changeArticleFlag = ({commit}, flag) => {
   commit("CHANGE_ARTICLE_FLAG", flag)
 }
+
+export const displayTopic = ({commit}, type) => {
+  commit('DISPLAY_TOPIC', type)
+}
+

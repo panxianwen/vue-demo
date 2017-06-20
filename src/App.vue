@@ -48,7 +48,7 @@
       </transition>
     </div>
     <div class="rightbar" v-if="articleFlag">
-      <nav v-if="!isLogin">
+      <nav v-if="!islogin">
         <ul class="nav-ul">
           <li @click="changeLoginway('login')">
             <router-link to="/login">
@@ -64,7 +64,7 @@
           </li>
         </ul>
       </nav>
-      <div v-if="isLogin" class="navbar-user">
+      <div v-if="islogin" class="navbar-user">
         <a class="avatar">
           <img src="http://p1.meituan.net/dpnewvc/fd7179e374a7ff68a31921be7932c6c850161.jpg">
         </a>
@@ -104,7 +104,7 @@
           this.$store.dispatch('changeIsLogin', false)
         }
       }) */
-      this.$store.dispatch('changeIsLogin', true)
+      this.$store.dispatch('changeIsLogin', false)
     }
   }
 </script>
