@@ -7,9 +7,15 @@ export default {
   CHANGE_ISLOGIN (state, value) {
    state.islogin = value
   },
-
   CHANGE_LOGINWAY (state, loginway) {
     state.loginway = loginway
+  },
+  DISPLAY_ARTICLES (state, payload) {
+    state.show = payload.type
+    state.articles = payload.articleList
+  },
+  CHANGE_ARTICLE_FLAG (state, flag) {
+    state.articleFlag = flag
   }
 
 }

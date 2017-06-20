@@ -16,6 +16,7 @@ const state = {
   loginway: 'login',
   articleFlag: false,
   islogin: false,
+  articles: [],
 }
 
 export default new Vuex.Store({

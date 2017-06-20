@@ -9,3 +9,11 @@ export const changeIsLogin = ({commit}, value) => {
 export const changeLoginway = ({commit}, loginWay) => {
   commit('CHANGE_LOGINWAY', loginWay)
 }
+
+export const displayArticles = ({commit}, payload) =>{
+  commit('DISPLAY_ARTICLES', payload)
+}
+
+export const changeArticleFlag = ({commit}, flag) => {
+  commit("CHANGE_ARTICLE_FLAG", flag)
+}
