@@ -7,6 +7,8 @@ import Download from '../components/Download.vue'
 import Bonus from '../components/Bonus.vue'
 import Special from '../components/Special.vue'
 import SpecialList from '../components/SpecialList.vue'
+import WriteArticle from '../components/WriteArticle.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(Router)
 
@@ -35,6 +37,12 @@ export default new Router({
     }, {
       path: '/bonus',
       component: Bonus
+    }, {
+      path: '/write',
+      component: WriteArticle
+    }, {
+      path: '/login',
+      component: Login
     }
   ]
 })

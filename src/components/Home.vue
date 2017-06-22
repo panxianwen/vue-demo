@@ -76,7 +76,7 @@
     methods: {
       displayArticles (type) {
         // 发送请求,找出对应类型的文章
-        var url = '/article/list?type=' + type
+       /* var url = '/article/list?type=' + type
         this.$http.get(url).then(function (response) {
           var resData = JSON.parse(response.body)
           if (resData.status) {
@@ -87,7 +87,13 @@
             }
             this.$store.dispatch('displayArticles', payload)
           }
-        })
+        }) */
+        var articleList = []
+        var payload = {
+          type: type,
+          articleList: articleList
+        }
+        this.$store.dispatch('displayArticles', payload)
       }
     },
     mounted () {
