@@ -24,24 +24,6 @@ userDbUtils.saveUser = function (user) {
     return promise
 }
 
-/*登录时查找用户*/
-userDbUtils.getUserByLogin = function (email, password) {
-  var promise = new Promise(function (resolve, reject) {
-    var sql, params
-    sql = 'select * from users where email = ? and password = ?'
-    params = [email, password]
-    connection.query(sql, params, function (error, response) {
-      if (error) {
-        reject(error)
-      } else {
-        resolve(response)
-      }
-    })
-  })
-
-  return promise
-}
-
 /*登录时,查找用户*/
 userDbUtils.getUserByLogin = function (email, password) {
   var promise = new Promise(function (resolve, reject) {
@@ -61,7 +43,7 @@ userDbUtils.getUserByLogin = function (email, password) {
 }
 
 /*注册时，查找用户*/
-userDbUtils.getUserByLogin = function (email, nickname) {
+userDbUtils.getUserByRegister = function (email, nickname) {
   var promise = new Promise(function (resolve, reject) {
     var sql, params
     sql = 'select * from users where email = ? and nickname = ?'
